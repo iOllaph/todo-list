@@ -100,6 +100,7 @@ html, body {
         flex-direction: column;
         overflow-y: auto;
         max-height: calc(60dvh - 100px);
+        height: calc(60dvh - 100px);
 
         &::-webkit-scrollbar {
             width: 4px;
@@ -118,6 +119,7 @@ html, body {
             gap: 5px;
             padding: 20px 0px 10px 0px;
             border-bottom: 1px solid;
+            cursor: pointer;
 
             button {
                 padding: 0px;
@@ -149,6 +151,17 @@ html, body {
                     color: var(--danger);
                 }
             }
+        }
+
+        .no-tasks {
+            text-align: center;
+            color: var(--black);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            flex-grow: 1;
         }
     }
 
