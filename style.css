@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --background: #F2EFEA;
+    --primary: #0E6BA8;
+    --danger: #E63946;
+
+    --font: "Inter", sans-serif;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font);
+    background-color: var(--background);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 60dvh;
+    width: 524px;
+    padding: 40px;
+    justify-content: space-between;
+
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        gap:10px
+    }
+
+    .header-content {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        button {
+            min-width: 35px;
+            min-height: 35px;
+            background-color: var(--white);
+            outline: none;
+            cursor: pointer;
+            padding: 0px;
+            border-radius: 8px;
+            border: 2px solid;
+            border-color: var(--danger);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                opacity: 60%;
+            }
+
+            &:active {
+                transform: scale(0.96);
+            }
+
+            .badge {
+                width: 20px;
+                height: 20px;
+                display: flex;
+                background-color: var(--danger);
+                border: 2px solid;
+                border-color: var(--white);
+                border-radius: 50%;
+                position: absolute;
+                bottom: -12px;
+                left: -12px;
+
+                span {
+                    font-weight: bold;
+                    font-family: var(--font);
+                    margin: auto;
+                    font-size: 12px;
+                    color: var(--white);
+                }
+            }
+           
+        }
+    }
+
+    .list-content {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        max-height: calc(60dvh - 100px);
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            background: var(--background);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: var(--black);
+            border-radius: 4px;
+        }
+
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 20px 0px 10px 0px;
+            border-bottom: 1px solid;
+
+            button {
+                padding: 0px;
+                outline: none;
+                background: none;
+                border: none;
+                min-height: 24px;
+                min-width: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(0.96);
+                }
+            }
+
+            span {
+                font-size: 16px;
+            }
+
+            &.marked {
+                border-bottom-color: var(--danger);
+
+                span {
+                    text-decoration: line-through;
+                    text-decoration-color: var(--danger);
+                    color: var(--danger);
+                }
+            }
+        }
+    }
+
+    .action-content {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        input {
+            background-color: var(--white);
+            border: 2px solid;
+            border-color: var(--black);
+            min-height: 31px;
+            padding: 0px 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: var(--font);
+            outline: none;
+            width: 380px;
+        }
+
+        button {
+            min-width: 35px;
+            min-height: 35px;
+            border: 2px solid;
+            border-color: var(--black);
+            background-color: var(--white);
+            outline: none;
+            cursor: pointer;
+            padding: 0px;
+            border-radius: 8px;
+
+            &:hover {
+                opacity: 60%;
+            }
+
+            &:active {
+                transform: scale(0.96);
+            }
+        }
+    }
+}
